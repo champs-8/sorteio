@@ -69,8 +69,11 @@ function limpar() {;
     qtdTeam.value = ''
     qtdPeoples.value = ''
     spanMult.innerHTML = '';
+    //destivando as divs e sections com os jogadores      
     document.querySelector('.list').style.display = 'none';
     document.querySelector('.sorteados').style.display = 'none';
+    //ativar novamente o botão gerar lista
+    document.getElementById('generate').style.display = 'flex';
 }
 
 
@@ -78,7 +81,10 @@ function limpar() {;
 //depois sortea-los aleatoriamente
 
 function sortear() {
-    document.querySelector('.sorteados').style.display = 'flex';
+    //botão sortear e gerar lista vai sumir para impedir que sorteie mais de uma vez.
+    document.getElementById('sortear').style.display = 'none';
+    document.getElementById('generate').style.display = 'none';
+    
     const array = [];
     let divName = document.querySelectorAll('.namePlayer');
 
@@ -101,6 +107,7 @@ function sortear() {
     //depois vai retirar o valor que foi selecionado na ultima vez
     //e repetir o processo ate zerar.
     const sorteio = () => {
+        document.querySelector('.sorteados').style.display = 'flex';
         let newArray = array;
         while (newArray.length > 0) {
             document.getElementById('sorteados').innerHTML = ''
@@ -110,6 +117,13 @@ function sortear() {
                 let section = document.createElement('section');
                 section.className = 'team flex';
                 section.setAttribute('id', `section${i}`);
+
+                // criando o input de nome do time
+                let inputName = document.createElement("input")
+                inputName.setAttribute('type','text');
+                inputName.setAttribute('id',`inputNameSection${i}`);
+                inputName.setAttribute('placeholder',`Time ${1+i}`); //porque tem que começar com time 1
+                
                 
                 //configurar a quantidade de divs dentro da section
                 for (let c = 0; peoples > c; c++) {
@@ -129,6 +143,7 @@ function sortear() {
                 //OK OK gloriaaaaaaaaa a DEUUUSSSSSSS
                 
                 //inserir a section com as divs na div .sorteados
+                document.getElementById('sorteados').appendChild(inputName);
                 document.getElementById('sorteados').appendChild(section);
             }
         }
