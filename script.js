@@ -14,8 +14,6 @@ const multiply = {
             let mult = Number(qtdTeam.value*qtdPeoples.value);
             document.querySelector('#multiply').innerHTML = `Serão ${mult} jogadores, divididos entre ${qtdTeam.value} times`;
         }
-        console.log('verificando');
-        console.log(spanMult.textContent);
     }, 1000)
 };
 
@@ -25,13 +23,11 @@ function teste() {
     let team = qtdTeam.value; //times
     let peoples = qtdPeoples.value; //pessoas por time
     let players = team*peoples //quantidade jogadores
-    console.log(team, peoples, players);
     spanMult.style.display = 'flex';
     
     // codigo para parar a verificação
     if (players != '') {
         clearInterval(multiply.t);
-        console.log('parou a verificação');
     }
     //a partir da segunda gerada de lista sem atualização
     //será feito o comentario de jogadores manualmente
@@ -69,12 +65,12 @@ function teste() {
     }
 }
 //limpar inputs
-function limpar() {
-    console.log('limpou');
+function limpar() {;
     qtdTeam.value = ''
     qtdPeoples.value = ''
     spanMult.innerHTML = '';
     document.querySelector('.list').style.display = 'none';
+    document.querySelector('.sorteados').style.display = 'none';
 }
 
 
@@ -82,6 +78,7 @@ function limpar() {
 //depois sortea-los aleatoriamente
 
 function sortear() {
+    document.querySelector('.sorteados').style.display = 'flex';
     const array = [];
     let divName = document.querySelectorAll('.namePlayer');
 
@@ -95,7 +92,6 @@ function sortear() {
     for (let a of divName) {
         array.push(a.value);
     }
-    console.log(array);
 
     //criar aletoriaridade
     //vai definir uma posição no array que será selecionado
@@ -107,7 +103,6 @@ function sortear() {
     const sorteio = () => {
         let newArray = array;
         while (newArray.length > 0) {
-            console.log(newArray);
             document.getElementById('sorteados').innerHTML = ''
             
             //para saber a quantidade de sections
@@ -119,7 +114,6 @@ function sortear() {
                 //configurar a quantidade de divs dentro da section
                 for (let c = 0; peoples > c; c++) {
                     let positionName = Math.floor(Math.random()*newArray.length);//vai gerar o valor de uma posição
-                    console.log(positionName);
                     let divs = document.createElement('div');
                     divs.className = 'sortPlayer flex';
                     divs.setAttribute('id', `sortP${c}sec${i}`)
@@ -131,7 +125,6 @@ function sortear() {
                     section.appendChild(divs);
                     //retirar o valor do array
                     newArray.splice(newArray.indexOf(`${newArray[positionName]}`),1)
-                    console.log(newArray);
                 }
                 //OK OK gloriaaaaaaaaa a DEUUUSSSSSSS
                 
@@ -139,7 +132,6 @@ function sortear() {
                 document.getElementById('sorteados').appendChild(section);
             }
         }
-        console.log('passou tudo');
     } 
     sorteio()
 }
