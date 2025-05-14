@@ -2,7 +2,7 @@
 
 > Uma aplicação simples e direta para realizar sorteios de nomes, ideal para eventos, brindes ou decisões aleatórias.
 
-![banner]([https://via.placeholder.com/800x200.png?text=SORTEIO+-+Simples,+Rápido+e+Justo](https://github.com/champs-8/sorteio/blob/master/Captura%20de%20tela%202025-05-14%20142920.png))
+![banner]([https://github.com/champs-8/sorteio/blob/master/banner.png])
 
 ---
 
