@@ -227,7 +227,7 @@ footer a:visited {
     border-radius: 5px;
 }
 ::-webkit-scrollbar-track:hover {
-    background: rgb(170, 170, 170);
+    background: transparent;
 }
 /* bolinha de rolagem */
 ::-webkit-scrollbar-thumb {
