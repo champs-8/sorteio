@@ -122,6 +122,7 @@ function sortear() {
                 let inputName = document.createElement("input")
                 inputName.setAttribute('type','text');
                 inputName.setAttribute('id',`inputNameSection${i}`);
+                inputName.setAttribute('class','inputNameSection');
                 inputName.setAttribute('placeholder',`Time ${1+i}`); //porque tem que começar com time 1
                 
                 
