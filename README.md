@@ -37,3 +37,6 @@ O **Sorteio** é um script leve em Python desenvolvido com o objetivo de oferece
 ```bash
 git clone https://github.com/champs-8/sorteio.git
 cd sorteio
+```
+2. Acesse o link:
+   ### https://champs-8.github.io/sorteio/
