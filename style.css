@@ -163,6 +163,8 @@ select, input[type="number"] {
  #sorteados {
     padding: 5px;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 /* section dos times */
 .team {
@@ -172,7 +174,7 @@ select, input[type="number"] {
     background-color: var(--bgsection);
     width: 65vw;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 /* div como nome do sorteado */
 .sortPlayer {
@@ -183,6 +185,24 @@ select, input[type="number"] {
     margin: .2em;
     padding: .4em;
     border-radius: 15px;
+}
+.inputNameSection{
+    display: flex;
+    text-align: center;
+    width: 80%;
+    padding: 5px 8px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--bg);
+    margin: 5px;
+    font-family: var(--fontbtns);
+    font-weight: 500;
+    font-size: 80%;
+    outline: none;
+}
+.inputNameSection::placeholder{
+    color: black;
+    font-weight: 500;
 }
 footer {
     margin-top: 8px;
