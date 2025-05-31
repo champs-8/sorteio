@@ -48,10 +48,10 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ## 📦 Instalação
 
-1. Clone o repositório:
+- Clone o repositório:
 
 ```bash
 git clone https://github.com/champs-8/sorteio.git
 cd sorteio
 ```
-2. Acesse o link: (https://champs-8.github.io/sorteio/)
+- Acesse o link: (https://champs-8.github.io/sorteio/)
